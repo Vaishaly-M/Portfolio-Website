@@ -36,10 +36,8 @@ const Contact = () => {
         <div className="awesome">
           {/* darkMode */}
           <span style={{color: darkMode?'white': ''}}>Get in Touch</span>
-          <span>Contact me</span>
+          <span style={{color: "var(--maroon)"}}>Contact me</span>
           <div
-            className="blur s-blur1"
-            style={{ background: "#ABF1FF94" }}
           ></div>
         </div>
       </div>

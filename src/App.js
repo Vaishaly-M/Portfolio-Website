@@ -1,11 +1,12 @@
 import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Intro/Intro";
-import Services from "./components/Services/Services";
+import About from "./components/About/About";
 import "./App.css";
-import Experience from "./components/Experience/Experience";
-import Works from "./components/Works/Works";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Testimonial from "./components/Testimonials/Testimonial";
+import Education from "./components/Education/Education";
+import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
+import Achievements from "./components/Achievements/Achievements";
+import Volunteering from "./components/Volunteering/Volunteering";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { useContext } from "react";
@@ -23,11 +24,12 @@ function App() {
     >
       <Navbar />
       <Intro />
-      <Services />
-      <Experience />
-      <Works />
-      <Portfolio />
-      <Testimonial />
+      <About />
+      <Education />
+      <Skills />
+      <Projects />
+      <Achievements />
+      <Volunteering />
       <Contact />
       <Footer />
     </div>

@@ -2,8 +2,13 @@
   height: 10vh;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  position: fixed;
+  width: 90%;
+  margin: 0;
+  background-color:white;
+  z-index: 1000; 
   top: 0;
+  
 }
 .n-left {
   flex: 1;
@@ -33,9 +38,13 @@
   gap: 2rem;
   margin-right: 4rem;
 }
+.n-list > ul > li .active {
+  border-bottom: 2px solid var(--pink); /* Add underline */
+  color: var(--pink); /* Optional: Change text color */
+}
 
 .n-list > ul :hover {
-  color: var(--orange);
+  color: var(--pink);
   cursor: pointer;
 }
 

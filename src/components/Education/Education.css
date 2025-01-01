@@ -1,0 +1,95 @@
+.education {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 30vh;
+    margin-bottom: 8rem;
+    color: var(--black);
+    flex-direction: column; /* Change to column layout */
+  }
+.heading{
+    margin-left: 3rem;
+}
+  .heading  span:nth-of-type(1){
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.heading span:nth-of-type(2){
+    color: var(--maroon);
+    font-size: 46px;
+    font-weight: bold;
+}
+.heading  span:nth-of-type(3){
+    font-size: 46px;
+    font-weight: bold;
+}
+
+  
+  .education-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    flex-direction: row; /* Keeps achievements side by side */
+  }
+  .box{
+    background: #fff;
+    width: 500px;
+    height: 300px;
+    border: 4px solid var(--maroon);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #ae3d74;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 10rem;
+    height: 10rem;
+    background: white;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .circle img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain;  /* Ensures logos don't get distorted */
+  }
+  
+  .circle::before {
+    border-radius: 100%;
+    content: '';
+    background-image: linear-gradient(to bottom, var(--maroon) 0%, var(--pink) 100%);
+    top: -8px;
+    left: -8px;
+    bottom: -8px;
+    right: -8px;
+    position: absolute;
+    z-index: -1;
+    box-shadow: var(--boxShadow);
+  }
+  
+  .achievement span:nth-of-type(2) {
+    color: var(--maroon);
+  }
+  
+  @media screen and (max-width: 480px) {
+    .education {
+      transform: scale(0.7);
+    }
+  }
+  

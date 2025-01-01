@@ -1,0 +1,121 @@
+/* General Styles */
+#Volunteering {
+    padding: 40px;
+}
+
+.section-title {
+    margin-bottom: 30px;
+  
+}
+.section-title  span:nth-of-type(1){
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.section-title  span:nth-of-type(2){
+    color: var(--maroon);
+    font-size: 36px;
+    font-weight: bold;
+}
+.section-title  span:nth-of-type(3){
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Volunteer Experience Grid */
+.volunteer-experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Experience Box */
+.experience-box {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 4px solid var(--maroon);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Adjust this to fit the image height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slides {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+.slides.active {
+    display: block;
+    opacity: 1;
+}
+
+.slideshow-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Description Box */
+.description {
+    padding: 20px;
+    text-align: center;
+}
+
+.description p {
+    font-size: 16px;
+    color: #555;
+}
+
+.description strong {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Navigation buttons (removed as per your request) */
+.slide-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.slide-navigation button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.slide-navigation button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .volunteer-experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .slideshow-container {
+        height: 150px; /* Adjust height for smaller screens */
+    }
+}
