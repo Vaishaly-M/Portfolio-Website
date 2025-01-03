@@ -95,6 +95,7 @@
       height: 10rem !important; 
       padding: 1rem !important;
     }
+    
   
     .achievements img {
       max-height: 100px !important;
@@ -107,4 +108,4 @@
     .t-heading span {
       font-size: 1.2rem !important;
   }
-  
+}
