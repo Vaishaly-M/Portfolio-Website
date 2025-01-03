@@ -45,7 +45,7 @@
 .slideshow-container {
     position: relative;
     width: 100%;
-    height: 200px; /* Adjust this to fit the image height */
+    height: 200px; 
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -88,7 +88,6 @@
     color: #333;
 }
 
-/* Navigation buttons (removed as per your request) */
 .slide-navigation {
     display: flex;
     justify-content: space-between;
@@ -116,6 +115,6 @@
     }
 
     .slideshow-container {
-        height: 150px; /* Adjust height for smaller screens */
+        height: 150px; 
     }
 }

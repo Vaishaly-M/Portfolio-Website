@@ -23,7 +23,6 @@ const Intro = () => {
       {/* left name side */}
       <div className="i-left">
         <div className="i-name">
-          {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>Hi! I Am</span>
           <span>Vaishaly Mahendrarajah</span>
           <span> <br />
@@ -39,9 +38,15 @@ const Intro = () => {
         </Link>
         {/* social icons */}
         <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Medium} alt="" />
+         <a href="https://github.com/Vaishaly-M" target="_blank" rel="noopener noreferrer">
+             <img src={Github} alt="" />
+             </a>   
+          <a href="https://linkedin.com/in/vaishaly-mahedrarajah" target="_blank" rel="noopener noreferrer">
+             <img src={LinkedIn} alt="" />
+             </a>
+          <a href="https://medium.com/@vasukivaishaly1" target="_blank" rel="noopener noreferrer">
+             <img src={Medium} alt="" />
+             </a>   
         </div>
       </div>
       {/* right image side */}

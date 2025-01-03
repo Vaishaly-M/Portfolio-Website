@@ -39,8 +39,8 @@
   margin-right: 4rem;
 }
 .n-list > ul > li .active {
-  border-bottom: 2px solid var(--pink); /* Add underline */
-  color: var(--pink); /* Optional: Change text color */
+  border-bottom: 2px solid var(--pink); 
+  color: var(--pink); 
 }
 
 .n-list > ul :hover {

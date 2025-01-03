@@ -42,7 +42,16 @@ const Achievements = () => {
         // install Swiper modules
         modules={[Pagination]}
         slidesPerView={1}
+        spaceBetween={10}
         pagination={{ clickable: true }}
+        breakpoints={{
+          768: {
+            slidesPerView: 2, // Show 2 slides on tablets
+          },
+          1024: {
+            slidesPerView: 3, // Show 3 slides on desktop
+          },
+        }}
       >
         {clients.map((client, index) => {
           return (

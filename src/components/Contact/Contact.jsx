@@ -2,53 +2,73 @@ import React, { useContext, useRef, useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
+
 const Contact = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   const form = useRef();
-  const [done, setDone] = useState(false)
+  const [done, setDone] = useState(false);
+  const [error, setError] = useState(null); // For detailed error display
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_2mu5xtl",
-        "template_m5udu2c",
+        "service_2mu5xtl", // Replace with your actual service ID
+        "template_m5udu2c", // Replace with your actual template ID
         form.current,
-        "VLwg1ltOWvnCYAiK_"
+        "VLwg1ltOWvnCYAiK_" // Replace with your actual public key
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log("Email sent successfully:", result.text);
           setDone(true);
-          form.reset();
+          e.target.reset(); // Clear form after successful submission
         },
         (error) => {
-          console.log(error.text);
+          console.error("Failed to send email:", error.text);
+          setError("Failed to send email. Please try again later.");
         }
       );
   };
 
   return (
     <div className="contact-form" id="contact">
-      {/* left side copy and paste from work section */}
+      {/* left side */}
       <div className="w-left">
         <div className="awesome">
-          {/* darkMode */}
-          <span style={{color: darkMode?'white': ''}}>Get in Touch</span>
-          <span style={{color: "var(--maroon)"}}>Contact me</span>
-          <div
-          ></div>
+          <span style={{ color: darkMode ? "white" : "" }}>Get in Touch</span>
+          <span style={{ color: "var(--maroon)" }}>Contact me</span>
         </div>
       </div>
+
       {/* right side form */}
       <div className="c-right">
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="user_name" className="user"  placeholder="Name"/>
-          <input type="email" name="user_email" className="user" placeholder="Email"/>
-          <textarea name="message" className="user" placeholder="Message"/>
-          <input type="submit" value="Send" className="button"/>
-          <span>{done && "Thanks for Contacting me"}</span>
+          <input
+            type="text"
+            name="user_name"
+            className="user"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            name="user_email"
+            className="user"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            name="message"
+            className="user"
+            placeholder="Message"
+            required
+          />
+          <input type="submit" value="Send" className="button" />
+          {done && <span>Thanks for contacting me!</span>}
+          {error && <span className="error">{error}</span>}
           <div
             className="blur c-blur1"
             style={{ background: "var(--purple)" }}
